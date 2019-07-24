@@ -19,9 +19,11 @@ class App extends Component {
 
   likeBook = (book) => {
     console.log(book)
-    this.setState({
-      likedBooks: [...this.state.likedBooks, book]
-    })
+      if (!this.state.likedBooks.includes(book)) {
+      this.setState({
+        likedBooks: [...this.state.likedBooks, book]
+      })
+    } else { console.log('book already liked')}
   }
 
   render() {
