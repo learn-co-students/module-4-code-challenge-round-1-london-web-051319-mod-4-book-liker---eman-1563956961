@@ -18,7 +18,10 @@ class App extends Component {
   }
 
   likeBook = (book) => {
-    console.log('book liked')
+    console.log(book)
+    this.setState({
+      likedBooks: [...this.state.likedBooks, book]
+    })
   }
 
   render() {
