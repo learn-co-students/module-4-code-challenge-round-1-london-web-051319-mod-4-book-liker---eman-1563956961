@@ -1,10 +1,13 @@
 import React from "react";
 
-const Book = props => {
+const Book = ({id, title, author, img, toggleOnBookShelf, toggleOffBookShelf, onShelf }) => {
+  const selectedBook = {id, title, author, img}
+
+  const bookOnShelf = (onShelf.length > 1) ? (onShelf.map(book => book.title === selectedBook.title) ? true : false) : false
   return (
-    <div>
-      <h2>{/*book title*/}</h2>
-      {/*book img*/}
+    <div onClick={bookOnShelf ? () => toggleOffBookShelf(selectedBook) : () => toggleOnBookShelf(selectedBook)} >
+      <h2>{title}</h2>
+      <img src={img} alt={title}/>
     </div>
   );
 };
