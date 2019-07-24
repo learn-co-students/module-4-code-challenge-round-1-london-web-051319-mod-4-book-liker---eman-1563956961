@@ -5,7 +5,7 @@ const Bookshelf = props => {
   return (
     <div>
       <h1>Book Shelf</h1>
-      <ul>{/*render list of books here*/}</ul>
+      <ul>{props.onShelf.map(book => <Book {...book} toggleOnBookShelf={props.toggleOnBookShelf} toggleOffBookShelf={props.toggleOffBookShelf} onShelf={props.onShelf} key={book.id}/>)}</ul>
     </div>
   );
 };
