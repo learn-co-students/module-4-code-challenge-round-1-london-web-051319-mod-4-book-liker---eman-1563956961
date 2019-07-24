@@ -31,10 +31,10 @@
     transform: rotate(360deg);
   }
 }
-img {
+/* img {
   width: 20%;
   height: 20%;
-}
+} */
 .book-container {
   display: flex;
 }
